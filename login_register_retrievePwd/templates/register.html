@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+{% load  staticfiles %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>用户注册</title>
+<link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/fort.css' %}">
+<script src="{% static 'js/fort.js' %}"></script>
+</head>
+<body>
+<div class="form-wrapper">
+	<div class="top"><div class="colors"></div></div>
+    <div class="h1"><h1>用户注册</h1></div>
+	<form name="form" action="{% url 'register' %}" method="post" autocomplete="off">
+		<div class="form">
+			<div class="form-item">
+				<input type="text" name="email" required="required" value="{% if email %}{{ email }}{% endif %}{% if register_form.data.email %}{{ register_form.data.email }}{% endif %}" placeholder="请输入邮箱" autocomplete="off">
+			</div>
+            <div class="form-item">
+                    <input type="password" name="password" required="required" value="" placeholder="请输入密码" autocomplete="off">
+			</div>
+{#			<div class="form-item">#}
+{#				<input type="text" name="captcha" required="required" value="" placeholder="请填写验证码" autocomplete="off">#}
+{#                {{ register_form.captcha }}#}
+{#			</div>#}
+            {% if forgetPwd %}<div style="margin: -35px 0px 15px 250px;"><p><a href="{% url 'forget' %}">忘记密码？</a></p></div>{% endif %}
+            <div class="error-text">{% if msg %}{{ msg }}{% endif %}{% for key, error in register_form.errors.items %}{% if forloop.first %}{{ error }}{% endif %}{% endfor %}</div>
+
+			<div class="button-panel">
+				<input type="submit" class="button" title="Register" value="注册激活">
+			</div>
+		</div>
+        {% csrf_token %}
+	</form>
+</div>
+<div class="footer-banner" style="width:728px; margin:200px auto 0"></div>
+<script>
+    solid();
+</script>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.8.2/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>激活帐号失败</title>
+</head>
+<body>
+<form action="{% url 'register' %}" method="post">
+    <p>激活帐号失败</p>
+    <input type="hidden" name="email" value="{{ email }}">
+    {% if msg %}<button type="submit" class="btn">{{ msg }}</button>{% endif %}
+    {% csrf_token %}
+</form>
+
+</body>
+</html>

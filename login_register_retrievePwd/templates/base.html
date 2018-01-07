@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Base Title{% endblock %}</title>
+</head>
+<body>
+<a href="{% url 'login' %}">
+    <h1>点击登录</h1>
+</a>
+</body>
+</html>

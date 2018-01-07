@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>激活帐号成功</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fort.css' %}">
+
+    <span id="cg">2016/12/21 上午12:00:00</span>
+    <script>
+{#        <!--这个cg就是span的id，初始化Date时间并转化为字符string类型,每1000毫秒，setInterval() 就会调用函数，直到被关闭。-->#}
+        setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
+    </script>
+
+</head>
+<body>
+<div class="form-wrapper">
+    <p style="color: #7abc2c; font-size: 20px;">恭喜您，帐号激活成功!</p>
+    <p>{{ time }}</p>
+</div>
+</body>
+</html>
