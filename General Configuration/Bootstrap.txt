@@ -1,0 +1,7 @@
+Bootstrap将会根据你的屏幕的大小来调整HTML元素的大小 —— 强调 响应式设计的概念。
+
+通过响应式设计，你无需再为你的网站设计一个手机版的。它在任何尺寸的屏幕上看起来都会不错。
+
+你仅需要通过添加下列代码到你的HTML开头来将Bootstrap添加到任意应用中：
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css"/>

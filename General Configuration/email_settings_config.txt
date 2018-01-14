@@ -1,0 +1,6 @@
+EMAIL_HOST = 'smtp.sina.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'kingsuosina@sina.com'
+EMAIL_HOST_PASSWORD = '158yang95228911('
+EMAIL_USE_TLS = False
+EMAIL_FROM = 'kingsuosina@sina.com'

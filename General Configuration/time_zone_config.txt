@@ -1,0 +1,12 @@
+# LANGUAGE_CODE = 'en-us'   # 英文
+LANGUAGE_CODE = 'zh-hans'   # 中文
+
+# TIME_ZONE = 'UTC' # 国际时区
+TIME_ZONE = 'Asia/Shanghai'  # 上海时区
+
+USE_I18N = True
+
+USE_L10N = True
+
+# USE_TZ = True  # 使用国际时区
+USE_TZ = False  # 不使用国际时区
