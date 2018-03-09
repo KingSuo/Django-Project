@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'login_register_retrievePwd',
         'USER': 'root',
-        'PASSWORD': '15895228911',
+        'PASSWORD': '*******', # mobile_of_xuzhou
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
